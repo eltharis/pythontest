@@ -21,9 +21,8 @@ STATICFILES_FINDERS = (
 'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 'django.contrib.staticfiles.finders.FileSystemFinder',
 )
-TEMPLATE_CONTEXT_PROCESSORS = TCP + (
-'django.core.context_processors.request',
-)
+TEMPLATE_CONTEXT_PROCESSORS = TCP + ['django.core.context_processors.request']
+
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
