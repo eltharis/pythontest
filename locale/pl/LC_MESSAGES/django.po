@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-28 16:02+0100\n"
+"POT-Creation-Date: 2015-12-28 16:43+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,86 +64,74 @@ msgid "teacherGrade"
 msgstr "stopień naukowy"
 
 #: registrations/models.py:20
-#, fuzzy
-#| msgid "choice|plural"
 msgid "teacherGrade|plural"
 msgstr "stopnie naukowe"
 
 #: registrations/models.py:24
 msgid "teacher|name"
-msgstr "Imię"
+msgstr "imię"
 
-#: registrations/models.py:32
+#: registrations/models.py:31
 msgid "teacher"
 msgstr "prowadzący"
 
-#: registrations/models.py:33
-#, fuzzy
-#| msgid "choice|plural"
+#: registrations/models.py:32
 msgid "teacher|plural"
 msgstr "prowadzący"
 
-#: registrations/models.py:37
+#: registrations/models.py:36
 msgid "termType|name"
 msgstr "nazwa"
 
-#: registrations/models.py:43
+#: registrations/models.py:42
 msgid "termType"
 msgstr "typ zajęć"
 
-#: registrations/models.py:44
+#: registrations/models.py:43
 msgid "termType|plural"
 msgstr "typy zajęć"
 
-#: registrations/models.py:48
+#: registrations/models.py:47
 msgid "term|name"
 msgstr "nazwa"
 
-#: registrations/models.py:50
+#: registrations/models.py:49
 msgid "term|maxStudents"
 msgstr "maksymalna liczba studentów"
 
-#: registrations/models.py:58 registrations/models.py:63
-#: registrations/models.py:88
+#: registrations/models.py:56 registrations/models.py:61
+#: registrations/models.py:92
 msgid "term"
 msgstr "przedmiot"
 
-#: registrations/models.py:59
-#, fuzzy
-#| msgid "choice|plural"
+#: registrations/models.py:57
 msgid "term|plural"
 msgstr "przedmioty"
 
-#: registrations/models.py:64
+#: registrations/models.py:62
 msgid "termTime|start"
 msgstr "początek zajęć"
 
-#: registrations/models.py:65
+#: registrations/models.py:63
 msgid "termTime|stop"
 msgstr "koniec zajęć"
 
-#: registrations/models.py:82
+#: registrations/models.py:86
 msgid "termTime"
 msgstr "zajęcia"
 
-#: registrations/models.py:83
+#: registrations/models.py:87
 msgid "termTime|plural"
 msgstr "zajęcia"
 
-#: registrations/models.py:87
+#: registrations/models.py:91
 msgid "student"
 msgstr "student"
 
-#: registrations/models.py:92
-#, fuzzy
-#| msgid "signedStudents"
-msgid "signedStudent"
-msgstr "zapisany student"
-
-#: registrations/models.py:95
+#: registrations/models.py:95 registrations/models.py:98
 msgid "signedStudents"
 msgstr "zapisany student"
 
-#: registrations/models.py:96
+#: registrations/models.py:99
 msgid "signedStudents|plural"
 msgstr "zapisani studenci"
