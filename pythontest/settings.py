@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LOCALE_PATHS = [
-    os.path.join(BASE_DIR, 'locale')
+    os.path.join(BASE_DIR, 'static/locale')
 ]
 
 LANGUAGES = (
