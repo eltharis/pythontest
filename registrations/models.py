@@ -12,6 +12,9 @@ class TeacherGrade(models.Model):
     teacherGradeShort = models.TextField(max_length=5, verbose_name=_('teacherGrade|short'))
     teacherGradeLong = models.TextField(max_length=10, verbose_name=_('teacherGrade|long'))
 
+    def __str__(self):
+        return self.teacherGradeShort
+
     class Meta:
         verbose_name = _('teacherGrade')
         verbose_name_plural = _('teacherGrade|plural')
@@ -23,7 +26,7 @@ class Teacher(models.Model):
 
     def __str__(self):
         s = " "
-        return s.join((self.teacherGrade, self.teacherName))
+        return s.join((self.teacherGrade.__str__(), self.teacherName))
 
     class Meta:
         verbose_name = _('teacher')
@@ -34,7 +37,7 @@ class TermType(models.Model):
     typeName = models.TextField(max_length=100, verbose_name=_('termType|name'))
 
     def __str__(self):
-        return self.termName
+        return self.typeName
 
     class Meta:
         verbose_name = _('termType')
@@ -49,8 +52,7 @@ class Term(models.Model):
 
     def __str__(self):
         s = " "
-        return s.join((self.termType, ":", self.termName, self.termTeacher, _('term|maxStudents'),
-                       self.termMaxStudents))
+        return s.join((str(self.termType), ":", self.termName, "-", str(self.termTeacher)))
 
     class Meta:
         verbose_name = _('term')
@@ -73,8 +75,8 @@ class TermTime(models.Model):
             self.signedstudents_set.create(signedStudent=user)
 
     def __str__(self):
-        s = "/"
-        return s.join((self.term, self.signedstudents_set.count()))
+        s = " "
+        return s.join((str(self.term), str(self.signedstudents_set.count()), '/', str(self.term.termMaxStudents)))
 
     class Meta:
         verbose_name = _('termTime')
@@ -86,8 +88,8 @@ class SignedStudents(models.Model):
     signedTermTime = models.ForeignKey(TermTime, on_delete=models.CASCADE, verbose_name=_('term'))
 
     def __str__(self):
-        s = "/"
-        return s.join((self.signedTerm, self.signedStudent))
+        s = " "
+        return s.join((str(self.signedTermTime), "; zapisany student:", str(self.signedStudent)))
 
     class Meta:
         verbose_name = _('signedStudents')
