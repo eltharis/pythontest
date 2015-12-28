@@ -68,8 +68,15 @@ class TermTime(models.Model):
     def student_not_signed(self, user):
         return self.signedstudents_set.filter(signedStudent__id=user.id) == []
 
+    def student_got_time(self, user):
+        term_time_array = TermTime.filter(signedstudents_set__signedStudent__id=user.id)
+        for termTime in term_time_array:
+            if self.timeStart < termTime.timeStart < self.timeStop or self.timeStart < termTime.timeStop < self.timeStop:
+                return False
+        return True
+
     def sign_student(self, user):
-        if not self.exceeded_max() or self.student_not_signed(user):
+        if not self.exceeded_max() and self.student_not_signed(user) and self.student_got_time(user):
             self.signedstudents_set.create(signedStudent=user)
 
     def __str__(self):
