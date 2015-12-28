@@ -11,18 +11,11 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
-from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
-STATICFILES_FINDERS = (
-'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-'django.contrib.staticfiles.finders.FileSystemFinder',
-)
-TEMPLATE_CONTEXT_PROCESSORS = TCP + ['django.core.context_processors.request']
-
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
@@ -35,7 +28,7 @@ STATICFILES_DIRS = (
 SECRET_KEY = 'o603fcfh8z9#ok+92#z(%4!pw3z!)!v-t+4&5rlm95^p@&!(c$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
