@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-28 14:03+0100\n"
+"POT-Creation-Date: 2015-12-28 16:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,26 +27,123 @@ msgstr "treść pytania"
 msgid "question|datePublished"
 msgstr "data publikacji"
 
-#: polls/models.py:13 polls/models.py:18
+#: polls/models.py:16 polls/models.py:21
 msgid "question"
 msgstr "pytanie"
 
-#: polls/models.py:14
+#: polls/models.py:17
 msgid "question|plural"
 msgstr "pytania"
 
-#: polls/models.py:19
+#: polls/models.py:22
 msgid "choice|choiceText"
 msgstr "treść wyboru"
 
-#: polls/models.py:20
+#: polls/models.py:23
 msgid "choice|votes"
 msgstr "liczba głosów"
 
-#: polls/models.py:23
+#: polls/models.py:30
 msgid "choice"
 msgstr "odpowiedź"
 
-#: polls/models.py:24
+#: polls/models.py:31
 msgid "choice|plural"
 msgstr "odpowiedzi"
+
+#: registrations/models.py:12
+msgid "teacherGrade|short"
+msgstr "stopień (skrót)"
+
+#: registrations/models.py:13
+msgid "teacherGrade|long"
+msgstr "stopień"
+
+#: registrations/models.py:19
+msgid "teacherGrade"
+msgstr "stopień naukowy"
+
+#: registrations/models.py:20
+#, fuzzy
+#| msgid "choice|plural"
+msgid "teacherGrade|plural"
+msgstr "stopnie naukowe"
+
+#: registrations/models.py:24
+msgid "teacher|name"
+msgstr "Imię"
+
+#: registrations/models.py:32
+msgid "teacher"
+msgstr "prowadzący"
+
+#: registrations/models.py:33
+#, fuzzy
+#| msgid "choice|plural"
+msgid "teacher|plural"
+msgstr "prowadzący"
+
+#: registrations/models.py:37
+msgid "termType|name"
+msgstr "nazwa"
+
+#: registrations/models.py:43
+msgid "termType"
+msgstr "typ zajęć"
+
+#: registrations/models.py:44
+msgid "termType|plural"
+msgstr "typy zajęć"
+
+#: registrations/models.py:48
+msgid "term|name"
+msgstr "nazwa"
+
+#: registrations/models.py:50
+msgid "term|maxStudents"
+msgstr "maksymalna liczba studentów"
+
+#: registrations/models.py:58 registrations/models.py:63
+#: registrations/models.py:88
+msgid "term"
+msgstr "przedmiot"
+
+#: registrations/models.py:59
+#, fuzzy
+#| msgid "choice|plural"
+msgid "term|plural"
+msgstr "przedmioty"
+
+#: registrations/models.py:64
+msgid "termTime|start"
+msgstr "początek zajęć"
+
+#: registrations/models.py:65
+msgid "termTime|stop"
+msgstr "koniec zajęć"
+
+#: registrations/models.py:82
+msgid "termTime"
+msgstr "zajęcia"
+
+#: registrations/models.py:83
+msgid "termTime|plural"
+msgstr "zajęcia"
+
+#: registrations/models.py:87
+msgid "student"
+msgstr "student"
+
+#: registrations/models.py:92
+#, fuzzy
+#| msgid "signedStudents"
+msgid "signedStudent"
+msgstr "zapisany student"
+
+#: registrations/models.py:95
+msgid "signedStudents"
+msgstr "zapisany student"
+
+#: registrations/models.py:96
+msgid "signedStudents|plural"
+msgstr "zapisani studenci"

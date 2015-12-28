@@ -25,8 +25,7 @@ class Teacher(models.Model):
     teacherGrade = models.ForeignKey(TeacherGrade)
 
     def __str__(self):
-        s = " "
-        return s.join((self.teacherGrade.__str__(), self.teacherName))
+        return "%s %s" % (str(self.teacherGrade), self.teacherName)
 
     class Meta:
         verbose_name = _('teacher')
@@ -51,8 +50,7 @@ class Term(models.Model):
     termType = models.ForeignKey(TermType)
 
     def __str__(self):
-        s = " "
-        return s.join((str(self.termType), ":", self.termName, "-", str(self.termTeacher)))
+        return "%s: %s - %s" % (str(self.termType), self.termName, str(self.termTeacher))
 
     class Meta:
         verbose_name = _('term')
@@ -75,8 +73,7 @@ class TermTime(models.Model):
             self.signedstudents_set.create(signedStudent=user)
 
     def __str__(self):
-        s = " "
-        return s.join((str(self.term), str(self.signedstudents_set.count()), '/', str(self.term.termMaxStudents)))
+        return "%s, %s/%s" % (str(self.term), str(self.signedstudents_set.count()), str(self.term.termMaxStudents))
 
     class Meta:
         verbose_name = _('termTime')
@@ -88,8 +85,7 @@ class SignedStudents(models.Model):
     signedTermTime = models.ForeignKey(TermTime, on_delete=models.CASCADE, verbose_name=_('term'))
 
     def __str__(self):
-        s = " "
-        return s.join((str(self.signedTermTime), "; zapisany student:", str(self.signedStudent)))
+        return "%s; %s: %s" % (str(self.signedTermTime), _('signedStudents'), str(self.signedStudent))
 
     class Meta:
         verbose_name = _('signedStudents')
