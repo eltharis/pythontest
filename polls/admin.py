@@ -6,10 +6,12 @@ from .models import Question, Choice
 
 @admin.register(Question)
 class AdminQuestion(admin.ModelAdmin):
-    pass
+    list_display = ('questionText', 'pubDate')
+
 
 @admin.register(Choice)
 class AdminChoice(admin.ModelAdmin):
-    pass
+    list_display = ('question', 'choiceText', 'votes')
+
 
 
